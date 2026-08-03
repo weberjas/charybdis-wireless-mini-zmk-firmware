@@ -69,7 +69,7 @@ jobs:
               return shield.split(" ", 1)[0]
 
           def can_build_without_keymap(shield):
-              return shield == {"settings_reset", "tester_pro_micro"}
+              return shield in {"settings_reset", "tester_pro_micro"}
 
           groups = []
           for entry in config.get("include", []):
