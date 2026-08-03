@@ -6,6 +6,12 @@ board: [ nice_nano//zmk ]
 
 include:
 
+
+# ── test Firmware ────────────────────────────────────────────────────────────
+  - name: tester
+    board: nice_nano//zmk
+    shield: tester_pro_micro
+
 # ── Reset Firmware ────────────────────────────────────────────────────────────
   - name: settings_reset
     board: nice_nano//zmk
