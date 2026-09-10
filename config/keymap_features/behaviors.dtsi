@@ -157,6 +157,13 @@
             bindings = <&lt 7 ESC>, <&mo 6>; // hold, tap, double_tap
         };
 
+        td_scrl_slow: td_esc_scrl_slow {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&mo 7>, <&mo 6>; // hold, tap, double_tap
+        };
+
         lt_nav: nav_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;

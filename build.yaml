@@ -38,6 +38,7 @@ include:
       - charybdis_dongle
     keymap:
       - qwerty
+      - qwerty-weber
       # - colemak_dh
       # - canary
       # - focal
