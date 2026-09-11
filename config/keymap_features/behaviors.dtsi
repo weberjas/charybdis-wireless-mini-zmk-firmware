@@ -157,11 +157,30 @@
             bindings = <&lt 7 ESC>, <&mo 6>; // hold, tap, double_tap
         };
 
+        // 1. Create a 0-parameter hold behavior for your SCROLL layer
+        hold_scroll_layer: hold_scroll_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo 7>, <&none>;
+        };
+
+        // 2. Create a 0-parameter hold behavior for your SLOW layer
+        hold_slow_layer: hold_slow_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo 6>, <&none>;
+        };
+
+        // 3. Link them cleanly inside your tap-dance without raw parameter numbers
         td_scrl_slow: td_scrl_slow {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&mo 7>, <&mo 6>; // hold, tap, double_tap
+            bindings = <&hold_scroll_layer>, <&hold_slow_layer>;
         };
 
         lt_nav: nav_layer_tap {
