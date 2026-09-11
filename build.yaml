@@ -24,6 +24,7 @@ include:
       - charybdis_right_bt
     keymap:
       - qwerty
+      - qwerty-weber
       # - colemak_dh
       # - canary
       # - focal
