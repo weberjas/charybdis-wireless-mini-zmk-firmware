@@ -83,11 +83,11 @@
             display-name = "Sym";
             bindings = <
 // ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────────╮  ╭──────────┬──────────────────┬──────────────────┬─────────────────┬─────────────────┬─────────────╮
-    &trans          &kp EXCLAMATION  &kp AT           &kp HASH          &kp PERCENT       &kp CARET     &kp AMPS   &kp ASTRK          &kp LBKT           &kp RBKT          &kp PIPE          &trans
+    &trans          &kp EXCLAMATION  &kp AT           &kp HASH          &kp DOLLAR        &kp PERCENT   &kp CARET  &kp AMPS           &kp LBKT           &kp RBKT          &kp PIPE          &trans
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────────┤  ├──────────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
     &trans          &none            &none            &kp LT            &kp GT            &kp UNDER     &kp GRAVE  &kp KP_MINUS       &kp LPAR           &kp RPAR          &kp BSLH          &trans
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────────┤  ├──────────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
-    &trans          &none            &none            &none             &none             &code_blk     &kp EQUAL  &kp TILDE          &kp LBRC           &kp RBRC          &kp SLASH         &trans
+    &trans          &none            &none            &none             &kp ASTRK         &code_blk     &kp EQUAL  &kp TILDE          &kp LBRC           &kp RBRC          &kp SLASH         &trans
 // ╰───────────────┴────────────────┴────────────────┼─────────────────┼─────────────────┼──────────┤  ├──────────┼──────────────────┼──────────────────┴─────────────────┴─────────────────┴─────────────╯
                                                                               &none   &trans  &trans    &trans     &trans
                                                                           // ╰───────┴───────┴──────╯  ╰──────────┴──────────╯
