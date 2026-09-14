@@ -40,7 +40,7 @@
 // ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬─────────────────┬─────────────╮
     &kp TAB          &kp Q            &kp W            &kp E             &kp R             &kp T    &kp Y   &kp U              &kp I              &kp O             &kp P             &kp BACKSPACE
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
-    &mt LCTRL ESC    &kp A            &kp S            &kp D             &kp F             &kp G    &kp H   &kp J              &kp K              &kp L             &kp SEMICOLON     &kp SQT
+    &mt LCTRL ESC    &kp A            &kp S            &kp D             &kp F             &kp G    &kp H   &kp J              &kp K              &kp L             &kp SEMICOLON     &mt RMETA SQT
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
     &kp LSHIFT       &kp Z            &kp X            &kp C             &kp V             &kp B    &kp N   &kp M              &kp COMMA          &kp PERIOD        &kp FSLH          &kp RSHIFT
 // ╰───────────────┴────────────────┴────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┴─────────────────┴─────────────────┴─────────────╯
@@ -52,30 +52,45 @@
         NUM {
             display-name = "Num";
             bindings = <
-&none   &none  &none   &none  &none          &none            &kp PLUS     &mm_f7             &mm_f8             &mm_f9             &mm_f10            &none
-&trans   &none  &none  &none  &kp BACKSPACE  &kp LSHIFT       &kp KP_MINUS &mm_f4             &mm_f5             &mm_f6             &mm_f11            &none
-&none    &none  &kp X  &none  &none          &none            &kp EQUAL    &mm_f1             &mm_f2             &mm_f3             &mm_f12            &kp KP_SLASH
-                       &none  &none          &trans           &kp N0     &kp SPACE
+// ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────────┬──────────────────┬──────────────────┬─────────────────┬─────────────────┬─────────────╮
+    &trans          &none            &none            &none             &none             &none     &kp PLUS   &kp N7             &kp N8             &kp N9             &kp TILDE        &trans
+// ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
+    &trans          &none            &none            &none             &none             &none     &kp MINUS  &kp N4             &kp N5             &kp N6             &kp BACKSLASH    &trans
+// ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
+    &trans          &none            &none            &none             &none             &none     &kp EQUAL  &kp N1             &kp N2             &kp N3             &kp SLASH        &trans
+// ╰───────────────┴────────────────┴────────────────┼─────────────────┼─────────────────┼──────┤  ├──────────┼──────────────────┼──────────────────┴─────────────────┴─────────────────┴─────────────╯
+                                                                          &none   &none   &trans    &none      &kp N0
+                                                                      // ╰───────┴───────┴──────╯  ╰──────────┴──────────╯
             >;
         };
 
         NAV {
             display-name = "Nav";
             bindings = <
-&none    &msc MOVE_LEFT  &msc MOVE_UP    &none        &msc MOVE_DOWN  &msc MOVE_RIGHT     &detach_session  &create_or_attach  &next_pane   &show_sessions  &sync_panes       &none
-&kp TAB  &mkp MB4        &kp LALT        &kp LSHFT    &kp LCTRL       &mkp MB5            &h_split         &kp LEFT_ARROW     &kp DOWN     &kp UP          &kp RIGHT_ARROW   &none
-&none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT &none               &v_split         &kp HOME           &kp PG_DN    &kp PG_UP       &kp END           &none
-                                                      &none   &none   &none               &none   &trans
+// ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────────┬──────────────────┬──────────────────┬─────────────────┬─────────────────┬─────────────╮
+    &trans          &none            &none            &none             &none             &none     &none      &none              &none              &none             &none             &trans
+// ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
+    &trans          &none            &none            &none             &none             &none     &kp LEFT   &kp DOWN           &kp UP             &kp RIGHT         &none             &trans
+// ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
+    &trans          &none            &none            &none             &none             &none     &kp HOME   &kp PG_DN          &kp PG_UP          &kp HOME          &kp END           &trans
+// ╰───────────────┴────────────────┴────────────────┼─────────────────┼─────────────────┼──────┤  ├──────────┼──────────────────┼──────────────────┴─────────────────┴─────────────────┴─────────────╯
+                                                                          &none   &none   &none     &none      &trans
+                                                                      // ╰───────┴───────┴──────╯  ╰──────────┴──────────╯
             >;
         };
 
         SYM {
             display-name = "Sym";
             bindings = <
-&none  &kp TILDE  &kp DLLR  &kp CARET  &move_line_up    &mc_add_above      &kp AMPS   &kp PLUS     &kp LBKT  &kp RBKT  &kp PRCNT  &kp BSLH
-&none  &kp UNDER  &kp LT    &kp GT     &kp BACKSPACE    &delete_line       &kp GRAVE  &kp KP_MINUS &kp LPAR  &kp RPAR  &kp ASTRK  &kp PIPE
-&none  &home_dir  &none     &kp HASH   &move_line_down  &mc_add_below      &code_blk  &kp EQUAL    &kp LBRC  &kp RBRC  &kp AT     &kp FSLH
-                                       &none  &trans     &trans            &trans   &trans
+// ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────────╮  ╭──────────┬──────────────────┬──────────────────┬─────────────────┬─────────────────┬─────────────╮
+    &trans          &kp EXCLAMATION  &kp AT           &kp HASH          &kp PERCENT       &kp CARET     &kp AMPS   &kp ASTRK          &kp LBKT           &kp RBKT          &kp PIPE          &trans
+// ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────────┤  ├──────────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
+    &trans          &none            &none            &kp LT            &kp GT            &kp UNDER     &kp GRAVE  &kp KP_MINUS       &kp LPAR           &kp RPAR          &kp BSLH          &trans
+// ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────────┤  ├──────────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
+    &trans          &none            &none            &none             &none             &code_blk     &kp EQUAL  &kp TILDE          &kp LBRC           &kp RBRC          &kp SLASH         &trans
+// ╰───────────────┴────────────────┴────────────────┼─────────────────┼─────────────────┼──────────┤  ├──────────┼──────────────────┼──────────────────┴─────────────────┴─────────────────┴─────────────╯
+                                                                              &none   &trans  &trans    &trans     &trans
+                                                                          // ╰───────┴───────┴──────╯  ╰──────────┴──────────╯
             >;
         };
 
