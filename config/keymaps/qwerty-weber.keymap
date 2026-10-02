@@ -27,10 +27,9 @@
 #define NUM     1
 #define NAV     2
 #define SYM     3
-#define GAME    4
-#define EXTRAS  5
-#define SLOW    6
-#define SCROLL  7
+#define EXTRAS  4
+#define SLOW    5
+#define SCROLL  6
 
     keymap {
         compatible = "zmk,keymap";
@@ -38,7 +37,7 @@
             display-name = "Base";
             bindings = <
 // ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬─────────────────┬─────────────╮
-    &kp TAB          &kp Q            &kp W            &kp E             &kp R             &kp T    &kp Y   &kp U              &kp I              &kp O             &kp P             &mt RMETA BACKSPACE
+    &kp TAB          &kp Q            &kp W            &kp E             &kp R             &kp T    &kp Y   &kp U              &kp I              &kp O             &kp P             &kp BACKSPACE
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
     &mt LCTRL ESC    &kp A            &kp S            &kp D             &kp F             &kp G    &kp H   &kp J              &kp K              &kp L             &kp SEMICOLON     &kp SQT
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼─────────────────┼─────────────┤
@@ -91,16 +90,6 @@
 // ╰───────────────┴────────────────┴────────────────┼─────────────────┼─────────────────┼──────────┤  ├──────────┼──────────────────┼──────────────────┴─────────────────┴─────────────────┴─────────────╯
                                                                               &none   &trans  &trans    &trans     &trans
                                                                           // ╰───────┴───────┴──────╯  ╰──────────┴──────────╯
-            >;
-        };
-
-        GAME {
-            display-name = "Game";
-            bindings = <
-&kp N1  &kp TAB    &kp Q  &kp W   &kp E      &kp R           &none  &none  &none  &none  &none  &trans
-&kp N2  &kp LCTRL  &kp A  &kp S   &kp D      &kp F           &none  &none  &none  &none  &none  &none
-&kp N3  &kp LSHFT  &kp Y  &kp X   &kp C      &kp V           &none  &none  &none  &none  &none  &none
-                          &none   &kp SPACE  &kp LEFT_ALT    &none  &none
             >;
         };
 

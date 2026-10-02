@@ -13,23 +13,6 @@
     combos {
         compatible = "zmk,combos";
 
-        CapsWord {
-            bindings = <&caps_word>;
-            key-positions = <17 18>;
-            layers = <0>;
-        };
-
-        combo_esc_left {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>;
-            layers = <0>;
-        };
-
-        combo_esc_right {
-            bindings = <&kp ESC>;
-            key-positions = <9 10>;
-            layers = <0>;
-        };
 
         combo_BASE_or_EXTRAS {
             bindings = <&td_bore>;
@@ -69,29 +52,5 @@
             layers = <0>;
         };
 
-        combo_prev_desktop {
-            bindings = <&desktop_prev>;
-            key-positions = <24 25>;
-            layers = <0>;
-        };
-
-        combo_next_desktop {
-            bindings = <&desktop_next>;
-            key-positions = <34 35>;
-            layers = <0>;
-        };
-
-        combo_all_windows {
-            bindings = <&ht_combo_all_windows 0 0>;
-            key-positions = <32 33>;
-            layers = <0>;
-        };
-
-        combo_app_windows {
-            // KDE Present Windows (current app/window class).
-            bindings = <&ht_combo_app_windows 0 0>;
-            key-positions = <31 32>;
-            layers = <0>;
-        };
     };
 };
