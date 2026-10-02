@@ -23,7 +23,7 @@ include:
       - charybdis_left_bt
       - charybdis_right_bt
     keymap:
-      - qwerty
+      # - qwerty
       - qwerty-weber
       # - colemak_dh
       # - canary
@@ -38,7 +38,7 @@ include:
       - charybdis_right_dongle
       - charybdis_dongle
     keymap:
-      - qwerty
+      # - qwerty
       - qwerty-weber
       # - colemak_dh
       # - canary
