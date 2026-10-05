@@ -162,7 +162,7 @@
         td_bore: BASE_or_EXTRA {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mo 5>, <&to 0>;
+            bindings = <&mo 4>, <&to 0>;
         };
 
         // Combo action: tap switches to last app (Alt+Tab), hold opens "all windows" (Ctrl+F10).
